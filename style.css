@@ -21,4 +21,35 @@ h1 {
 main {
     width: 50%;
     margin: auto;
+    padding-top: 150px;
+}
+
+/* Navigation Bar Styling */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav-title {
+    display: none;
+}
+
+.nav-bar li {
+    display: inline;
+}
+
+.nav-bar li a {
+    padding: 0px 12px 0px 0px;
+}
+
+/* Link Styling */
+a {
+    text-decoration: none;
+    color: rgb(88, 85, 156);
+}
+
+a:hover {
+    font-weight: bold;
 }
