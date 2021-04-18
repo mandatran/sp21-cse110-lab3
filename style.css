@@ -10,8 +10,8 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Domine', serif;
 }
 
-h1 {
-    color: darkslategrey;
+hr + h1 {
+    color: darkslategray;
 }
 
 #top {
@@ -82,6 +82,10 @@ a:hover {
     margin-top: 0;
 }
 /* Content */
+p.thoughts::first-letter {
+    font-size: larger;
+    font-weight: bold;
+}
 .lights {
     display: flex;
     flex-direction: row;
@@ -93,37 +97,52 @@ a:hover {
     max-width: 50%;
     max-height: 100%;
 }
+
+p ~ ol {
+    font-size: 0.9rem;
+}
+
+ol + li {
+    font-weight: bold;
+}
+
 /* Image */
 img, video {
     display: block;
     margin: auto;
-    height: 500px;
-    width: 500px;
+    height: 250px;
+    width: 250px;
     object-fit: cover;
     padding: 1rem;
 }
 
 /* FORM */
 /* Journal Entry Grid */
-.journal-entry-form {
-    display: grid;
-    grid-row-gap: 1rem;
-    grid-column-gap: 1rem;
-    grid-template-columns: auto auto auto;
-    justify-items: stretch;
-}
-.journal-entry-form fieldset {
-    width: 250px;
-    max-width: 100%;
-}
+@media only screen and (min-width: 768px) {
+    img, video {
+        height: 500px;
+        width: 500px;
+    }
+    .journal-entry-form {
+        display: grid;
+        grid-row-gap: 1rem;
+        grid-column-gap: 1rem;
+        grid-template-columns: auto auto auto;
+        justify-items: stretch;
+    }
+    .journal-entry-form fieldset {
+        width: 250px;
+        max-width: 100%;
+    }
 
-.item-1 {
-    grid-column: 1;
-}
+    .item-1 {
+        grid-column: 1;
+    }
 
-.item-2 {
-    grid-column: 1;
-    grid-row: 2;
+    .item-2 {
+        grid-column: 1;
+        grid-row: 2;
+    }
 }
 
 .item-3 {
@@ -160,4 +179,13 @@ input:active, textarea:active {
 
 .submit-btn:hover {
     background: rgba(18, 31, 31, 0.3);
+}
+
+/* Footer */
+footer p {
+    position: static;
+    text-align: center;
+}
+footer a {
+    position: relative;
 }
